@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detection</title>
+</head>
+<body>
+    <h2>Upload Your Picture</h2>
+    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Upload Image:</label>
+        <input type="file" name="image" accept="image/*" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

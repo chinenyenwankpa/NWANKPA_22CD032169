@@ -1,0 +1,2 @@
+Github link: https://github.com/chinenyenwankpa/facialRecognition
+Render link: https://facialrecognition-jrom.onrender.com

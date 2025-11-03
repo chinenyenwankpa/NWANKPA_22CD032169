@@ -1,0 +1,25 @@
+# Python virtual environment
+venv/
+__pycache__/
+
+# Database
+database.db
+
+# Uploaded images
+static/uploads/
+
+# Model files
+face_emotionModel.h5
+facial_expression_model_weights.h5
+
+# Bytecode
+*.pyc
+*.pyo
+*.pyd
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Kaggle datasets
+data/

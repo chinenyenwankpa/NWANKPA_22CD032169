@@ -1,2 +1,2 @@
-Github link: https://github.com/chinenyenwankpa/facialRecognition
-Render link: https://facialrecognition-jrom.onrender.com
+Github link: https://github.com/chinenyenwankpa/NWANKPA_22CD032169
+Render link: https://nwankpa-22cd032169.onrender.com

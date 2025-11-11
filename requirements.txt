@@ -1,5 +1,5 @@
 Flask>=2.0
-tensorflow>=2.10
+tensorflow==2.15.0
 numpy
 pillow
 werkzeug

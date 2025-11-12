@@ -11,6 +11,25 @@ app.config['UPLOAD_FOLDER'] = 'static/uploads'
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
+# ---- Database initialization ----
+def init_db():
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            email TEXT,
+            image_path TEXT,
+            emotion TEXT
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+# Initialize the database when app starts
+init_db()
+
 
 # ---- Home page ----
 @app.route('/')
@@ -53,19 +72,5 @@ def predict():
 
 
 if __name__ == '__main__':
-    # Create the database table if it doesn’t exist
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT,
-            email TEXT,
-            image_path TEXT,
-            emotion TEXT
-        )
-    ''')
-    conn.commit()
-    conn.close()
-
+    # Only needed for local testing
     app.run(debug=True)

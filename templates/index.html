@@ -2,20 +2,23 @@
 <html>
 <head>
     <title>Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h2>Upload Your Picture</h2>
-    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
-        <label>Name:</label>
-        <input type="text" name="name" required><br><br>
+    <div class="container">
+        <h2>Upload Your Picture</h2> 
+        <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+            <label>Name:</label>
+            <input type="text" name="name" required>
 
-        <label>Email:</label>
-        <input type="email" name="email" required><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-        <label>Upload Image:</label>
-        <input type="file" name="image" accept="image/*" required><br><br>
+            <label>Upload Image:</label>
+            <input type="file" name="image" accept="image/*" required>
 
-        <input type="submit" value="Submit">
-    </form>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
